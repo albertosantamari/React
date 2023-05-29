@@ -4,6 +4,7 @@ export const Clock = () => {
   const horaActual = new Date().getHours();
   const [saludo, setSaludo] = useState("");
   useEffect(() => {
+    // se ejecuta cuando renderiza
     const saludar = (hora) => {
       if (hora >= 6 && hora < 12) {
         return "buenos dias";
@@ -13,7 +14,7 @@ export const Clock = () => {
       return "buenas noches";
     };
     setSaludo(saludar(horaActual));
-  }, []);
+  }, []); // array de dependencias
 
   return (
     <div>

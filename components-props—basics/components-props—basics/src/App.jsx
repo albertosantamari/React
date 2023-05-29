@@ -1,22 +1,24 @@
 import "./App.css";
 import { Title } from "./Title/Title";
-import { SubTitle } from "./SubTitle/SubTitle";
-import { Paragraph } from "./Paragraph/Paragraph";
 import { Image } from "./ImageHeader/Image";
+import { Paragraph } from "./Paragraph/Paragraph";
+import { SubTitle } from "./SubTitle/SubTitle";
 
 function App() {
-  const textOne = "H1 recibido por props";
-  const textTwo = "H2 recibido por props";
-  const imagMontain =
-    "https://fastly.picsum.photos/id/866/536/354.jpg?hmac=tGofDTV7tl2rprappPzKFiZ9vDh5MKj39oa2D--gqhA";
-  const textParraf = "P recibido por props";
+  const title = "holoaaa";
+  const subtitle = "h2 recibido";
+  const dataImag = {
+    src: "https://fastly.picsum.photos/id/866/536/354.jpg?hmac=tGofDTV7tl2rprappPzKFiZ9vDh5MKj39oa2D--gqhA",
+    alt: "Montain",
+  };
+  const parrafo = "P recibido";
 
   return (
     <div className="contenedor">
-      <Title textOne={textOne} />
-      <SubTitle textTwo={textTwo} />
-      <Image imagMontain={imagMontain} />
-      <Paragraph textThree={textParraf} />
+      <Title title={title} />
+      <SubTitle subtitle={subtitle} />
+      <Image source={dataImag.src} description={dataImag.alt} />
+      <Paragraph parrafo={parrafo} />
     </div>
   );
 }

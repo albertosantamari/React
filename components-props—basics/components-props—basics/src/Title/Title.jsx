@@ -1,9 +1,10 @@
+import PropTypes from "prop-types";
 import "./Title.css/";
 
-export const Title = ({ textOne }) => {
-  return (
-    <div>
-      <h1>{textOne}</h1>
-    </div>
-  );
+export const Title = (props) => {
+  return <h1>{props.title}</h1>;
+};
+
+Title.propTypes = {
+  title: PropTypes.string,
 };

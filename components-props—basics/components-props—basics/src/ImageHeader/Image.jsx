@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./Image.css/";
 
 const styles = {
@@ -7,12 +8,10 @@ const styles = {
   },
 };
 
-const textAlterna = {
-  alt: "Montain",
+export const Image = ({ source, description }) => {
+  return <img src={source} style={styles} alt={description} />;
 };
 
-export const Image = ({ imagMontain }) => {
-  return (
-    <img src={imagMontain} style={styles.imageMontain} alt={textAlterna.alt} />
-  );
+Image.propTypes = {
+  dataImag: PropTypes.string,
 };
